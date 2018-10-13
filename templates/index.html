@@ -1,0 +1,28 @@
+
+<html>
+<head>
+<script type="text/javascript">
+	function httpGetAsync(theUrl, callback) {
+	    var xmlHttp = new XMLHttpRequest();
+	    xmlHttp.onreadystatechange = function() {
+	        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+	            callback(xmlHttp.responseText);
+	    }
+	    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+	    xmlHttp.send(null);
+	}
+
+	httpGetAsynch('http://127.0.0.1:5000/store', function(response){
+	    alert(response)
+	})
+</script>
+</head>
+<body>
+<h1>Names</h1>
+<ul>
+	{% for name in names %}
+        <li>{{ name }}</li>
+	{% endfor %}
+</ul>
+</body>
+</html>
