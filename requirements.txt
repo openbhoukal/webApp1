@@ -88,7 +88,7 @@ testtools==2.3.0
 traceback2==1.4.0
 unittest2==1.1.0
 UNKNOWN==0.0.0
-urllib3==1.23
+urllib3==1.26.5
 vine==1.1.4
 WebOb==1.8.2
 Werkzeug==0.14.1
